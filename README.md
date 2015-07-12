@@ -10,8 +10,13 @@ Pythia8/Pythia.h is in $HOME/external/include, then do
 ```
 	export PYTHIA8=$HOME/external
 ```
-Then do
+Then, after cloning this repository using
 ```
+	git cline https://github.com/hbprosper/pythia.git
+```
+do
+```
+	cd pythia
 	source setup.sh
 	cd bin
 	make
