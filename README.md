@@ -20,6 +20,7 @@ do
 	source setup.sh
 	cd bin
 	make
+	cd ..
 ```
 The setup may fail because the Pythia8 script **pythia8-config** is not
 	executable.  Go to the location of the script (e.g.,
