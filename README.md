@@ -12,7 +12,7 @@ Pythia8/Pythia.h is in $HOME/external/include, then do
 ```
 Then, after cloning this repository using
 ```
-	git cline https://github.com/hbprosper/pythia.git
+	git clone https://github.com/hbprosper/pythia.git
 ```
 do
 ```
@@ -29,7 +29,7 @@ The setup may fail because the Pythia8 script **pythia8-config** is not
 ```
 
 
-## Testing
+## Test
 To test the program pythiaRun, do
 ```
 	cd work
