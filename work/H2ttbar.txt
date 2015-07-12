@@ -36,7 +36,7 @@ HiggsBSM:allH2	  = on	            ! H0 (H2) Heavy scalar Higgs
 Higgs:useBSM	  	= on	            ! Use BSM parameters rather than those of SM
 
 35:onMode		      = off 	
-35:onIfMatch		  = 6 -6	          ! H0 -> t + tbar
+35:onIfMatch		  = 6 -6	          ! H0 -> t + tbar (doesn't seem to work)
 
 PhaseSpace:pTHatMin = 0.	          ! minimum pT of hard process
 
