@@ -10,7 +10,7 @@ bin: $(NAME)
 $(NAME): 
 	$(CXX) $(CXXFLAGS) -Wno-shadow -I$(PYTHIA8)/include \
 	$@.cc -o $@ \
-	-L$(PYTHIA8)/lib -lpythia8 -lLHAPDF -lHepMC
+	-L$(PYTHIA8)/lib -lpythia8 -lLHAPDF -lHepMC -ldl
 
 clean:
 	rm -rf $(NAME) $(NAME).o
