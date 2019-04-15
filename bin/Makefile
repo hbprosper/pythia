@@ -8,7 +8,7 @@ CXX:=g++
 bin: $(NAME)
 
 $(NAME): 
-	$(CXX) $(CXXFLAGS) -Wno-shadow -stdlib=libc++ -std=c++11 -I$(PYTHIA8)/include \
+	$(CXX) $(CXXFLAGS) -Wno-shadow -I$(PYTHIA8)/include \
 	$@.cc -o $@ \
 	-L$(PYTHIA8)/lib -lpythia8 -lLHAPDF -lHepMC -ldl
 
