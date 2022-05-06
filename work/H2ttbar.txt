@@ -1,42 +1,4 @@
-! ---------------------------------------------------------------------
-! File: H2ttbar.txt
-! This file contains commands to be read in for a Pythia8 run. 
-! Lines not beginning with a letter or digit are comments.
-! Names are case-insensitive  -  but spellings-sensitive!
-! The changes here are illustrative, not always physics-motivated.
-! ---------------------------------------------------------------------
-! 1) Settings that will be used in a main program.
-Main:numberOfEvents = 1000 	        ! number of events to generate/read
-Main:timesAllowErrors = 3  	  	    ! abort run after this many flawed events
-! ---------------------------------------------------------------------
-! 2) Settings related to output in init(), next() and stat().
-Init:showChangedSettings = on       ! list changed settings
-Init:showAllSettings = off 	        ! list all settings
-Init:showChangedParticleData = on   ! list changed particle data
-Init:showAllParticleData = off      ! list all particle data
-Next:numberCount = 100              ! print message every n events
-Next:numberShowLHA = 0              ! print LHA information n times
-Next:numberShowInfo = 0             ! print event information n times
-Next:numberShowProcess = 1          ! print process record n times
-Next:numberShowEvent = 0 	          ! print event record n times
-Stat:showPartonLevel = off	        ! additional statistics on MPI
-! ---------------------------------------------------------------------
-! 3) Beam parameter settings. Values below agree with default ones.
-Beams:idA = 2212                   ! first beam, p = 2212, pbar = -2212
-Beams:idB = 2212                   ! second beam, p = 2212, pbar = -2212
-Beams:eCM = 13000.                 ! CM energy of collision
-! ---------------------------------------------------------------------
-! 4a) Process
-
-SLHA:file         = pMSSM12_MCMC1_11_447618.slha
-SLHA:keepSM       = on
-SLHA:minMassSM    = 200.0
-
-HiggsBSM:allH2    = on	            ! H0 (H2) Heavy scalar Higgs
-Higgs:useBSM      = on	            ! Use BSM parameters rather than those of SM
-
-35:onMode         = off 	
-35:onIfMatch      = 6 -6	          ! H0 -> t + tbar (doesn't seem to work)
-
-PhaseSpace:pTHatMin = 0.	          ! minimum pT of hard process
+HepMC::Version 3.02.05
+HepMC::Asciiv3-START_EVENT_LISTING
+HepMC::Asciiv3-END_EVENT_LISTING
 

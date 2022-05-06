@@ -6,7 +6,7 @@
 ! The changes here are illustrative, not always physics-motivated.
 ! --------------------------------------------------------------------------
 ! 1) Settings that will be used in a main program.
-Main:numberOfEvents = 1000         ! number of events to generate/read
+Main:numberOfEvents = 100          ! number of events to generate/read
 Main:timesAllowErrors = 3          ! abort run after this many flawed events
 ! --------------------------------------------------------------------------
 ! 2) Settings related to output in init(), next() and stat().
@@ -30,7 +30,7 @@ Beams:eCM = 13000.                 ! CM energy of collision
 ! --------------------------------------------------------------------------
 ! 4) Process
 HiggsSM:gg2H = on		   ! Higgs boson prod. via gluon-gluon fusion
-25:m0        = 125.6		   ! (GeV) Higgs boson mass
+25:m0        = 125.0		   ! (GeV) Higgs boson mass
 25:onMode    = off		   ! all decays off
 25:onIfMatch = 23 23		   ! decay to ZZ
 

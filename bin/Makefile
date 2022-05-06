@@ -1,16 +1,19 @@
-ifndef PYTHIA8
-$(error PYTHIA8 not defined! export PYTHIA8=location of lib directory for libpythia8.so)
-endif
 # name of Pythia
-NAME:=pythiaRun
-CXX:=g++
+NAME	:= pythiaRun
+CXX	:= clang++
 
-bin: $(NAME)
+PYTHIA8FLAGS	:= $(shell pythia8-config --cxxflags)
+PYTHIA8LIBS	:= $(shell pythia8-config --libs)
+
+HEPMC3FLAGS	:= $(shell HepMC3-config --cxxflags)
+HEPMC3LIBS	:= $(shell HepMC3-config --libs)
+
+bin: 	$(NAME)
 
 $(NAME): 
-	$(CXX) $(CXXFLAGS) -Wno-shadow -I$(PYTHIA8)/include \
+	$(CXX) $(CXXFLAGS) -Wno-shadow $(HEPMC3FLAGS) $(PYTHIA8FLAGS) \
 	$@.cc -o $@ \
-	-L$(PYTHIA8)/lib -lpythia8 -lLHAPDF -lHepMC -ldl
+	$(PYTHIA8LIBS) $(HEPMC3LIBS) -lLHAPDF -ldl
 
 clean:
 	rm -rf $(NAME) $(NAME).o
